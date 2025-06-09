@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Python</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/prism.css">
+    <script src="assets/prism.js"></script>
+    <style>
+        .marginforcontainerclass {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .margintopbutton {
+            margin-top: 15px;
+        }
+
+        .toolbar-item button {
+            cursor: pointer !important;
+            color: white !important;
+            border: 1px solid white !important;
+            border-radius: 15px !important;
+            padding: 5px 14px !important;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+            padding: 7px;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        .table {
+            overflow-x: auto;
+        }
+
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        h3,h4{
+           
+            
+            text-decoration: underline;
+        }
+
+        body {
+            font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+        }
+        ul,ol,p{
+            line-height: 2;
+            text-align: justify;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #306998, #ffd43b);">
+    <a class="navbar-brand" style="margin:auto" href="#">
+        <h3 style="text-decoration: none;">Python Programming - Session 1</h3>
+    </a>
+</nav>
+
+    <div class="container marginforcontainerclass">
+        <div class="row">
+            <div class="col-md-12">
+
+                <a style="float: right;"  href="index.html" class="btn btn-primary">View All Sessions</a>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-6">
+
+                <h2>Content</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <ul>
+                    <li>Introduction</li>
+                    <li>Installation</li>
+                    <li>Working of Python Application</li>
+                    <li>Python in Shell</li>
+                    
+                    
+                    
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="introduction">
+                <h2>Introduction</h2>
+                <p>Python is a high-level, interpreted, general-purpose programming language known for its simplicity and readability. It is designed to be easy to learn and is widely used in web development, data science, artificial intelligence etc.</p>
+                <h3>Key Features of Python</h3>
+                <ul>
+                    <li>Simple & Readable syntax</li>
+                    <li>Interpreted language (no compilation needed)</li>
+                    <li>Cross-platform support (Windows, Linux, macOS)</li>
+                    <li>Extensive Standard Library/li>
+                    <li>Supports multiple programming paradigms (Procedural, Object-Oriented, Functional)</li>
+                    <li>Rapid Application Development</li>
+                    <li>Excellent Libraries and Frameworks</li>
+                    
+                </ul>
+                <h3>Brief History of Python</h3>
+<table border="1" class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Milestone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1989</td>
+      <td>Guido van Rossum began developing Python as a hobby project.</td>
+    </tr>
+    <tr>
+      <td>1991</td>
+      <td>First official release: Python 0.9.0</td>
+    </tr>
+    <tr>
+      <td>2000</td>
+      <td>Python 2.0 released with features like garbage collection and list comprehensions.</td>
+    </tr>
+    <tr>
+      <td>2008</td>
+      <td>Python 3.0 released — major upgrade with better Unicode support and cleaner syntax.</td>
+    </tr>
+    <tr>
+      <td>2020</td>
+      <td>Python 2 officially discontinued; Python 3 becomes the standard.</td>
+    </tr>
+    <tr>
+      <td>Now</td>
+      <td>Python 3 widely used in data science, machine learning, automation, web development, and more.</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Python Implementations</h3>
+<table border="1" class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Implementation</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>CPython</strong></td>
+      <td>The standard and most commonly used Python implementation, written in C. Default version from python.org.</td>
+    </tr>
+    <tr>
+      <td><strong>PyPy</strong></td>
+      <td>High-performance Python implementation with JIT (Just-In-Time) compilation. Much faster for many tasks.</td>
+    </tr>
+    <tr>
+      <td><strong>Jython</strong></td>
+      <td>Python implemented in Java. Allows use of Java libraries and runs on the Java Virtual Machine (JVM).</td>
+    </tr>
+    <tr>
+      <td><strong>IronPython</strong></td>
+      <td>Python for the .NET framework, written in C#. Integrates with C# and .NET libraries.</td>
+    </tr>
+    <tr>
+      <td><strong>MicroPython</strong></td>
+      <td>Lightweight Python for microcontrollers and IoT devices like Raspberry Pi Pico, ESP32, etc.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>What Can Python Do?</h3>
+<table border="1" class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Area</th>
+      <th>Examples / Use Cases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Web Development</td>
+      <td>Django, Flask – create websites and web apps</td>
+    </tr>
+    <tr>
+      <td>Data Science</td>
+      <td>Pandas, NumPy, Matplotlib – data analysis and visualization</td>
+    </tr>
+    <tr>
+      <td>Machine Learning & AI</td>
+      <td>Scikit-learn, TensorFlow, PyTorch – model training, prediction</td>
+    </tr>
+    <tr>
+      <td>Automation / Scripting</td>
+      <td>Selenium, Python scripts – automate tasks, bots, testing</td>
+    </tr>
+    <tr>
+      <td>Desktop Applications</td>
+      <td>Tkinter, PyQt – create GUI-based apps</td>
+    </tr>
+    <tr>
+      <td>Game Development</td>
+      <td>Pygame – build 2D games</td>
+    </tr>
+    <tr>
+      <td>API & Networking</td>
+      <td>Requests, FastAPI – access APIs, build backend services</td>
+    </tr>
+    <tr>
+      <td>IoT & Embedded Systems</td>
+      <td>Control sensors and hardware using Raspberry Pi</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Who Uses Python?</h3>
+<ul>
+  <li>Software Developers & Programmers</li>
+  <li>Data Scientists & Analysts</li>
+  <li>Machine Learning Engineers</li>
+  <li>Automation/Test Engineers</li>
+  <li>Web Developers</li>
+  
+  <li>Researchers in AI, Robotics, and Scientific Computing</li>
+  <li>Cybersecurity Experts & Ethical Hackers</li>
+</ul>
+</div>
+                
+                <hr>
+                <div class="installation">
+
+                
+                <h2>Installation</h2>
+                <ul>
+<li><a href="https://www.python.org/" target="_blank">Download Python</a> and install setup</li>
+<li>Check python version by using this command <pre class="language-c"><code>python --version</code></pre> </li>
+<li>IDE : <a target="_blank" href="https://code.visualstudio.com/download">Download VS Code</a></li>
+<li>Install Python (By Microsoft) extension in VS Code</li>
+                </ul>
+             
+                <hr>
+                <h2>Working of Python Application</h2>
+            <ul>
+                <li><b>Create hello.py file </b> Write print statement and one simple function</li>
+                <li><b>Create hello1.py :</b> Import function from hello and check working</li>
+                <li><b>__pycache__ folder : This folder in Python is an automatically generated directory that stores compiled bytecode files of your .py scripts</b></li>
+            
+            </ul>
+                <hr>
+                <h4>hello.py file</h2>
+                <pre class="language-csharp"><code>print("Welcome to Python Programming")
+
+def printdata(data):
+    print(data)
+
+printdata("Getting Started")</code></pre>
+                <h4>hello1.py</h4>
+                <pre class="language-csharp"><code>from hello import printdata
+
+printdata("This function is imported from another file")</code></pre>
+                
+                <hr>
+                <h2>Working of Python Application</h2>
+                <table border="1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Working of Python Console Application</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Step</strong></td>
+                            <td><strong>Description</strong></td>
+                        </tr>
+                        <tr>
+                            <td>1. Writing the Code</td>
+                            <td>The programmer writes Python code and saves it in a <code>.py</code> file.</td>
+                        </tr>
+                        <tr>
+                            <td>2. Compilation</td>
+                            <td>Python automatically compiles the source code into bytecode (.pyc) and stores it in the
+                                <code>__pycache__</code> folder.</td>
+                        </tr>
+                        <tr>
+                            <td>3. Interpretation</td>
+                            <td>The Python Virtual Machine (PVM) executes the bytecode line-by-line.</td>
+                        </tr>
+                        <tr>
+                            <td>4. Output Display</td>
+                            <td>The result of the execution is shown in the console/terminal.</td>
+                        </tr>
+                        <tr>
+                            <td>5. Error Handling</td>
+                            <td>Python immediately displays any errors (syntax, name, etc.) when they occur.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><strong>Key Concepts</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Line-by-line Execution</td>
+                            <td>Python executes the code sequentially, which simplifies debugging.</td>
+                        </tr>
+                        <tr>
+                            <td>Interpreter-Based</td>
+                            <td>No separate compilation step is required like in Java or C++.</td>
+                        </tr>
+                        <tr>
+                            <td>Bytecode & <code>__pycache__</code></td>
+                            <td>Bytecode files improve performance by caching compiled code.</td>
+                        </tr>
+                        <tr>
+                            <td>Cross-platform</td>
+                            <td>Python runs the same code on multiple operating systems.</td>
+                        </tr>
+                        <tr>
+                            <td>Error Visibility</td>
+                            <td>Errors are shown immediately, helping in fast development.</td>
+                        </tr>
+                    </tbody>
+                </table>
+</div>
+                <hr>
+                <h2>Python in Shell</h2>
+                <ul>
+                    <li>The Python shell is an interactive command-line interface that allows you to write and execute Python code one line at a time.</li>
+                    <li>You can enter the shell by typing: <pre class="language-c"><code>python</code></pre></li>
+                </ul>
+                <h3>Example of Using Python Shell</h3>
+                <pre class="language-csharp"><code>>>> print("Hello from Python Shell")
+Hello from Python Shell
+
+>>> a = 5
+>>> b = 10
+>>> a + b
+15
+
+>>> import hello
+Welcome to Python Programming
+Getting Started
+>>> hello.printdata("Python in Shell")
+Python in Shell
+>>></code></pre>
+               <h3>Notes</h3>
+            <ul>
+                <li>Use the Python shell for testing logic and understanding behavior.</li>
+                <li>Use script files (<code>.py</code>) for actual program development and reuse.</li>
+                <li>Use <code>exit()</code> or press <kbd>Ctrl</kbd> + <kbd>Z</kbd> (Windows) / <kbd>Ctrl</kbd> + <kbd>D</kbd>
+                    (Linux/Mac) to exit the shell.</li>
+            </ul>
+
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #592c8c;">
+
+        <a class="navbar-brand" style="margin:auto" href="https:www.revolutionit.in">&copy; <img src="Images/whitelogo.png" style="height: 40px;"></a>
+
+
+
+    </nav>
+</body>
+
+</html>
