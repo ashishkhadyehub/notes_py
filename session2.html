@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Python</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/prism.css">
+    <script src="assets/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
+    <style>
+        .marginforcontainerclass {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .margintopbutton {
+            margin-top: 15px;
+        }
+
+        .toolbar-item button {
+            cursor: pointer !important;
+            color: white !important;
+            border: 1px solid white !important;
+            border-radius: 15px !important;
+            padding: 5px 14px !important;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+            padding: 7px;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        .table {
+            overflow-x: auto;
+        }
+
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        h3,h4{
+           
+            
+            text-decoration: underline;
+        }
+
+        body {
+            font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+        }
+        ul,ol,p{
+            line-height: 2;
+            text-align: justify;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #306998, #ffd43b);">
+    <a class="navbar-brand" style="margin:auto" href="#">
+        <h3 style="text-decoration: none;">Python Programming - Session 2</h3>
+    </a>
+</nav>
+
+    <div class="container marginforcontainerclass">
+        <div class="row">
+            <div class="col-md-12">
+
+                <a style="float: right;"  href="index.html" class="btn btn-primary">View All Sessions</a>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-6">
+
+                <h2>Content</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <ul>
+                    <li>Numbers in Python</li>
+                    <li>Strings in Python</li>
+                    
+                   
+                    
+                    
+                    
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                <h2>Numbers in Python</h2>
+                <p>In Python, numbers are used to perform mathematical operations. Python supports several numeric types, each with its own behavior.</p>
+              <table class="table table-bordered table-striped table-hover">
+                <thead class="table-dark">
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>int</code></td>
+                    <td>Integer (whole numbers, positive or negative)</td>
+                    <td><code>10</code>, <code>-3</code>, <code>1000</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>float</code></td>
+                    <td>Floating-point numbers (decimals)</td>
+                    <td><code>3.14</code>, <code>-0.001</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>complex</code></td>
+                    <td>Complex numbers with real and imaginary parts</td>
+                    <td><code>2 + 3j</code></td>
+                  </tr>
+                </tbody>
+              </table>
+
+                <h4>Example</h4>
+                <pre class="language-py"><code>a = 5          # int
+b = 3.14       # float
+c = 2 + 3j     # complex
+
+print(type(a)) # <class 'int'>
+print(type(b)) # <class 'float'>
+print(type(c)) # <class 'complex'>
+</code></pre>
+                <hr>
+                <h3>Common Operations</h3>
+                <table class="table table-bordered table-striped table-hover">
+                  <thead class="table-dark">
+                    <tr>
+                      <th>Operation</th>
+                      <th>Symbol</th>
+                      <th>Example</th>
+                      <th>Result</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Addition</td>
+                      <td><code>+</code></td>
+                      <td><code>3 + 2</code></td>
+                      <td><code>5</code></td>
+                    </tr>
+                    <tr>
+                      <td>Subtraction</td>
+                      <td><code>-</code></td>
+                      <td><code>5 - 2</code></td>
+                      <td><code>3</code></td>
+                    </tr>
+                    <tr>
+                      <td>Multiplication</td>
+                      <td><code>*</code></td>
+                      <td><code>3 * 4</code></td>
+                      <td><code>12</code></td>
+                    </tr>
+                    <tr>
+                      <td>Division</td>
+                      <td><code>/</code></td>
+                      <td><code>7 / 2</code></td>
+                      <td><code>3.5</code></td>
+                    </tr>
+                    <tr>
+                      <td>Floor Division</td>
+                      <td><code>//</code></td>
+                      <td><code>7 // 2</code></td>
+                      <td><code>3</code></td>
+                    </tr>
+                    <tr>
+                      <td>Modulus (Remainder)</td>
+                      <td><code>%</code></td>
+                      <td><code>7 % 2</code></td>
+                      <td><code>1</code></td>
+                    </tr>
+                    <tr>
+                      <td>Exponent (Power)</td>
+                      <td><code>**</code></td>
+                      <td><code>2 ** 3</code></td>
+                      <td><code>8</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+<h3>Type Conversion, Opeartor Precedence and Opeartor Overloading</h3>
+<pre class="language-py"><code>
+x = int(3.8)     # 3
+p= int("8")     # 8
+y = float(5)     # 5.0
+z = complex(2)   # (2+0j)
+print(x,p,y,z)
+
+
+print((x+y)*2)
+
+
+print('Python' + ' Programming')
+print ('py ' * 2)
+</code></pre>
+ <h3>math and random library</h3>  
+ <pre class="language-py"><code>import math
+import random
+
+print("Floor of 45.56:", math.floor(45.56))          # 45
+print("Floor of -3.5:", math.floor(-3.5))            # -4
+
+print("Truncate -2.8:", math.trunc(-2.8))            # -2 (drops decimal, towards 0)
+print("Ceiling of 45.56:", math.ceil(45.56))         # 46
+
+print("Factorial of 5:", math.factorial(5))          # 120
+print("Square root of 16:", math.sqrt(16))           # 4.0
+
+print("Power 2^5:", math.pow(2, 5))                   # 32.0
+
+print("Value of PI:", math.pi)                        # 3.141592...
+
+print("Round of 34.56:", round(34.56))                # 35
+print("Round of 34.56789 to 2 decimal places:", round(34.56789, 2))  # 34.57
+
+print(random.randint(90,100))
+l1=[11,22,33,44,55,66,77]  
+print(random.choice(l1)) 
+random.shuffle(l1)
+print(l1)</code></pre>
+<hr>
+<h2>Strings in Python</h2>     
+<p>A string in Python is a sequence of characters enclosed in single, double, or triple quotes.</p>        
+<pre class="language-py"><code>name = 'python'
+greeting = "Hello"
+multiline = '''This
+is a
+multiline string'''
+
+print(name)
+print(greeting)
+print(multiline)</code></pre>
+<h3>Common String Operations</h3>
+<table class="table table-bordered table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Operation</th>
+      <th>Example</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Access character</td>
+      <td><code>name[0]</code></td>
+      <td><code>'A'</code></td>
+    </tr>
+    <tr>
+      <td>Slice</td>
+      <td><code>name[1:4]</code></td>
+      <td><code>'lic'</code></td>
+    </tr>
+    <tr>
+      <td>Length</td>
+      <td><code>len(name)</code></td>
+      <td><code>5</code></td>
+    </tr>
+    <tr>
+      <td>Concatenation</td>
+      <td><code>'Hello' + ' World'</code></td>
+      <td><code>'Hello World'</code></td>
+    </tr>
+    <tr>
+      <td>Repetition</td>
+      <td><code>'Hi ' * 3</code></td>
+      <td><code>'Hi Hi Hi '</code></td>
+    </tr>
+    <tr>
+      <td>Membership check</td>
+      <td><code>'a' in 'apple'</code></td>
+      <td><code>True</code></td>
+    </tr>
+    <tr>
+      <td>Iteration</td>
+      <td><code>for ch in name:</code></td>
+      <td>Loops through each character</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Common string methods</h3>
+<table class="table table-bordered table-striped">
+  <thead class="table-primary">
+    <tr>
+      <th>Method</th>
+      <th>Description</th>
+      <th>Example</th>
+      <th>Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>lower()</td>
+      <td>Converts string to lowercase</td>
+      <td><code>"Python".lower()</code></td>
+      <td>python</td>
+    </tr>
+    <tr>
+      <td>upper()</td>
+      <td>Converts string to uppercase</td>
+      <td><code>"Python".upper()</code></td>
+      <td>PYTHON</td>
+    </tr>
+    <tr>
+      <td>strip()</td>
+      <td>Removes leading and trailing whitespace</td>
+      <td><code>"  hello  ".strip()</code></td>
+      <td>hello</td>
+    </tr>
+    <tr>
+      <td>replace()</td>
+      <td>Replaces occurrences of substring</td>
+      <td><code>"abc abc".replace("abc", "xyz")</code></td>
+      <td>xyz xyz</td>
+    </tr>
+    <tr>
+      <td>split()</td>
+      <td>Splits string into list by separator</td>
+      <td><code>"a,b,c".split(",")</code></td>
+      <td>['a', 'b', 'c']</td>
+    </tr>
+    <tr>
+      <td>find()</td>
+      <td>Returns index of first occurrence or -1</td>
+      <td><code>"hello".find("ll")</code></td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>count()</td>
+      <td>Counts occurrences of substring</td>
+      <td><code>"hello hello".count("llo")</code></td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>format()</td>
+      <td>Formats string using placeholders</td>
+      <td><code>"Hello, {}".format("World")</code></td>
+      <td>Hello, World</td>
+    </tr>
+    <tr>
+      <td>f-string</td>
+      <td>Formatted string literals (Python 3.6+)</td>
+      <td><code>name = "Python"; f"Hello, {name}"</code></td>
+      <td>Hello, Python</td>
+    </tr>
+    <tr>
+      <td>in operator</td>
+      <td>Checks substring presence</td>
+      <td><code>"Py" in "Python"</code></td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Example</h3>
+<pre class="language-py"><code>string1 = "Python Programming"
+
+# Accessing individual characters and slices
+print(string1[0])             # Prints first character: 'P'
+print(string1[0:4])           # Prints first 4 characters: 'Pyth'
+print(string1[-1])            # Prints last character: 'g'
+print(string1[0:4:2])         # Prints first 4 characters with step 2: 'Pt'
+
+# String case conversion
+print(string1.lower())        # Converts to lowercase: 'python programming'
+print(string1.upper())        # Converts to uppercase: 'PYTHON PROGRAMMING'
+
+# String length
+print(len(string1))           # Returns the length: 18
+
+# Trimming whitespace and replacing text
+string2 = '   ABC String   '
+print(string2.strip())        # Removes leading/trailing whitespace: 'ABC String'
+print(string2.replace('ABC', 'PQR'))  # Replaces 'ABC' with 'PQR': '   PQR String   '
+
+# Splitting and finding substrings
+string3 = 'HTML, CSS, JS, Python'
+print(string3.split(', '))    # Splits into list: ['HTML', 'CSS', 'JS', 'Python']
+print(string3.find('CSS'))    # Finds index of 'CSS': 6
+
+# Counting substrings
+string4 = 'Web Web Web Development'
+print(string4.count('Web'))   # Counts 'Web': 3
+
+# String formatting
+product = 'Laptops'
+quantity = 5
+order = "We have ordered {} {}"
+print(order.format(quantity, product))  # Output: 'We have ordered 5 Laptops'
+
+# Escaped quotes
+message = "Python is a \"programming language\""
+print(message)                # Output: Python is a "programming language"
+
+# Raw string (e.g., file paths)
+path = r"C:\Users\User\Documents\file.txt"
+print(path)                   # Output: C:\Users\User\Documents\file.txt
+
+# Membership check
+print("Python" in message)    # Checks if 'Python' is in the message: True
+
+# F-string example
+language = "Python"
+feature = "popular"
+print(f"{language} is a {feature} language.")  # Output: Python is popular language.
+</code></pre>
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #592c8c;">
+
+        <a class="navbar-brand" style="margin:auto" href="https:www.revolutionit.in">&copy; <img src="Images/whitelogo.png" style="height: 40px;"></a>
+
+
+
+    </nav>
+</body>
+
+</html>
