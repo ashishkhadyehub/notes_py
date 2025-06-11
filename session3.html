@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Python</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/prism.css">
+    <script src="assets/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
+    <style>
+        .marginforcontainerclass {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .margintopbutton {
+            margin-top: 15px;
+        }
+
+        .toolbar-item button {
+            cursor: pointer !important;
+            color: white !important;
+            border: 1px solid white !important;
+            border-radius: 15px !important;
+            padding: 5px 14px !important;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+            padding: 7px;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        .table {
+            overflow-x: auto;
+        }
+
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        h3,h4{
+           
+            
+            text-decoration: underline;
+        }
+
+        body {
+            font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+        }
+        ul,ol,p{
+            line-height: 2;
+            text-align: justify;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #306998, #ffd43b);">
+    <a class="navbar-brand" style="margin:auto" href="#">
+        <h3 style="text-decoration: none;">Python Programming - Session 3</h3>
+    </a>
+</nav>
+
+    <div class="container marginforcontainerclass">
+        <div class="row">
+            <div class="col-md-12">
+
+                <a style="float: right;"  href="index.html" class="btn btn-primary">View All Sessions</a>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-6">
+
+                <h2>Content</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <ul>
+                    <li>Lists in Python</li>
+                    <li>Dictionary in Python</li>
+                    <li>Tuples in Python</li>
+                   
+                    
+                    
+                    
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                <h2>Lists in Python</h2>
+                <p>A list is a built-in data type in Python used to store multiple items in a single variable.</p>
+                <ul>
+                    <li>Ordered: Items have a defined order.</li>
+                    <li>Mutable: Items can be changed after the list is created.</li>
+                    <li>Heterogeneous: Can store elements of different data types (e.g., integers, strings, even other lists).</li>
+                    <li>Indexed: Access items using index positions starting from 0.</li>
+                </ul>
+              
+
+                <h4>List Implementation</h4>
+                <pre class="language-py"><code># Creating a List
+fruits = ["apple", "banana", "cherry","mango"]
+numbers = [10, 20, 30, 40]
+mixed = ["hello", 42, True]
+
+#Accessing List Items
+
+print(fruits[0])     # apple
+print(fruits[-1])    # cherry (last item)
+print(fruits[2:3])
+
+#modifying item
+fruits[1] = "orange"
+print(fruits)        # ['apple', 'mango', 'cherry']
+
+fruits.append("dragon fruit")         # Adds at end
+fruits.insert(1, "kiwi")        # Adds at index 1
+
+fruits.remove("apple")          # Removes by value
+fruits.pop()                    # Removes last item
+del fruits[0]                   # Removes by index
+
+for fruit in fruits:
+    print(fruit,end=" |")
+
+fruits.sort()       # Sorts alphabetically
+fruits.reverse()    # Reverses order
+print(len(fruits))  # Number of items
+
+copyfruits = fruits.copy()  # Copy the list
+
+print(copyfruits)
+
+if "mango" in fruits:
+    print("mango is in the skill list.")
+</code></pre>
+                <hr>
+                <h2>Dictionary in Python</h3>
+                    <p>A dictionary in Python is a collection of key-value pairs. It is mutable, and indexed by keys (not positions).</p>
+                    <ul>
+                        <li>Key-Value Pairs	Data stored in pairs like "key": value</li>
+                        <li>Mutable	: Can change, add, or delete items</li>
+                        <li>Unique Keys : Keys must be unique, values can repeat</li>
+                        <li>Indexed by Keys, accessed using keys, not by numeric index like lists</li>
+                        <li>Maintains insertion order starting from Python 3.7+</li>
+                    </ul>
+                    <h4>Dictionary Implementation</h4>
+              
+<pre class="language-py"><code># ✅ Creating a dictionary with key-value pairs
+skills = {
+    "front_end": "HTML",
+    "back_end": "C#",
+    "database": "SQL",
+}
+
+# 🔍 Accessing dictionary values
+print(skills["front_end"])     # Output: HTML
+print(skills.get("back_end"))  # Output: C#
+
+# ✏️ Updating a value
+skills["front_end"] = "JavaScript"
+
+# 🔁 Looping through dictionary (keys only)
+for skill in skills:
+    print(skill, skills[skill])
+
+# ✅ Checking if a key exists
+if "front_end" in skills:
+    print("Front-end skill is available.")
+
+# 📏 Length of dictionary
+print(len(skills))  # Output: Number of key-value pairs
+
+# ➕ Adding a new key-value pair
+skills["Sharing"] = "GitHub"
+print(skills)
+
+# ❌ Removing a specific key
+skills.pop("Sharing")
+
+# ❌ Removing the last inserted item
+skills.popitem()
+
+# ❌ Deleting a key-value pair by key
+del skills["front_end"]
+
+# ❌ Clearing all items from dictionary
+skills.clear()
+print(skills)  # Output: {}
+
+# 🔁 Copying a dictionary
+skills_copy = skills.copy()
+
+# 📦 Nested Dictionary Example (real-life use case)
+products = {
+    "Garment": {
+        'Mens Wear': ['Shirts', 'Trousers'],
+        'Womens Wear': ['Dresses', 'Skirts']
+    },
+    "Electronics": {
+        'Mobile Phones': ['Smartphones', 'Feature Phones'],
+        'Laptops': ['Gaming Laptops', 'Ultrabooks']
+    }
+}
+
+# 🔍 Accessing nested dictionary values
+print(products)
+print(products["Garment"])                    # Output: Sub-dictionary under 'Garment'
+print(products["Garment"]["Mens Wear"])       # Output: ['Shirts', 'Trousers']
+
+# 🔁 Dictionary Comprehension: Square of numbers 1–10
+squares = {x: x**2 for x in range(1, 11)}
+print(squares)</code></pre>
+<hr>
+<h2>Tuples in Python</h2>
+<p>A tuple is an ordered, immutable collection of items.</p>
+<ul>
+  <li><strong>Ordered:</strong> Elements maintain the sequence in which they were defined.</li>
+  <li><strong>Immutable:</strong> Once created, items in a tuple cannot be modified, added, or removed.</li>
+  <li><strong>Heterogeneous:</strong> Tuples can store elements of different data types (e.g., int, str, float).</li>
+  <li><strong>Iterable:</strong> Tuples can be iterated using loops like <code>for</code> and comprehensions.</li>
+  <li><strong>Efficient:</strong> Tuples are faster and use less memory compared to lists.</li>
+  
+</ul>
+<h4>Tuple Implementation</h4>
+<pre class="language-py"><code># Creating a tuple
+my_tuple = (10, 20, 30, 40)
+print("Tuple:", my_tuple)
+
+# Tuples can contain different data types
+mixed_tuple = (1, "Hello", 3.14, True)
+print("Mixed Tuple:", mixed_tuple)
+
+# Accessing elements using indexing
+print("First element:", my_tuple[0])
+print("Last element:", my_tuple[-1])
+
+# Slicing a tuple
+print("Sliced Tuple [1:3]:", my_tuple[1:3])
+
+# Length of the tuple
+print("Length of tuple:", len(my_tuple))
+
+# Iterating through a tuple
+print("Elements in my_tuple:")
+for item in my_tuple:
+    print(item)
+
+name_age = ("Shree", 30)
+name, age = name_age
+print("Name:", name)
+print("Age:", age)
+
+# Nested tuple
+nested = ((1, 2), (3, 4))
+print("Nested Tuple:", nested)
+print("Access nested item:", nested[1][0])  # Output: 3
+
+# Tuple with one element (must include a comma)
+single_element = (5,)
+print("Single-element Tuple:", single_element)
+print("Type of single_element:", type(single_element))  # Should be tuple
+
+# min and max 
+t = (34, 78, 12, 99, 56)
+print("Min:", min(t))
+print("Max:", max(t))
+
+
+# Repetition of tuple
+repeat_tuple = ("Python",) * 3
+print("Repeated Tuple:", repeat_tuple)</code></pre>
+ 
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #592c8c;">
+
+        <a class="navbar-brand" style="margin:auto" href="https:www.revolutionit.in">&copy; <img src="Images/whitelogo.png" style="height: 40px;"></a>
+
+
+
+    </nav>
+</body>
+
+</html>
