@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Python</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/prism.css">
+    <script src="assets/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
+    <style>
+        .marginforcontainerclass {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .margintopbutton {
+            margin-top: 15px;
+        }
+
+        .toolbar-item button {
+            cursor: pointer !important;
+            color: white !important;
+            border: 1px solid white !important;
+            border-radius: 15px !important;
+            padding: 5px 14px !important;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+            padding: 7px;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        .table {
+            overflow-x: auto;
+        }
+
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        h3,h4{
+           
+            
+            text-decoration: underline;
+        }
+
+        body {
+            font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+        }
+        ul,ol,p{
+            line-height: 2;
+            text-align: justify;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #306998, #ffd43b);">
+    <a class="navbar-brand" style="margin:auto" href="#">
+        <h3 style="text-decoration: none;">Python Programming - Session 5</h3>
+    </a>
+</nav>
+
+    <div class="container marginforcontainerclass">
+        <div class="row">
+            <div class="col-md-12">
+
+                <a style="float: right;"  href="index.html" class="btn btn-primary">View All Sessions</a>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-6">
+
+                <h2>Content</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <ul>
+                    <li>Loops in Python</li>
+                    <li>Functions in Python</li>
+                    <li>Scopes and Closure</li>
+                  
+                   
+                    
+                    
+                    
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <h2>Loops in Python</h2>
+                    <p>Loops are used to execute a block of code repeatedly as long as a condition is met or over a sequence</p>
+                    <table class="table table-bordered table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Loop Type / Keyword</th>
+      <th>Description</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>for</code> loop</td>
+      <td>Used for iterating over a sequence (like list, tuple, string).</td>
+      
+    </tr>
+    <tr>
+      <td><code>while</code> loop</td>
+      <td>Executes as long as the condition is true.</td>
+      
+    </tr>
+    <tr>
+      <td><code>break</code></td>
+      <td>Exits the loop prematurely.</td>
+      
+    </tr>
+    <tr>
+      <td><code>continue</code></td>
+      <td>Skips the current iteration and continues with the next one.</td>
+      
+    </tr>
+   
+    
+    <tr>
+      <td><code>range()</code></td>
+      <td>Generates a sequence of numbers to use with <code>for</code> loop.</td>
+      
+    </tr>
+  </tbody>
+</table>
+
+                    <h4>Loops Implementation </h4>
+                    <pre class="language-py"><code># -------------------------------
+# 1. for loop example
+# -------------------------------
+
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)  # Prints each fruit in the list
+
+print("---------------------------")
+
+# -------------------------------
+# 2. while loop example
+# -------------------------------
+
+count = 1
+while count <= 5:
+    print("Count:", count)  # Prints count from 1 to 5
+    count += 1  # Increment count by 1
+
+print("---------------------------")
+
+# -------------------------------
+# 3. Using break in a for loop
+# -------------------------------
+
+for i in range(10):
+    if i == 5:
+        break  # Exit loop when i is 5
+    print("Break example:", i)
+
+print("---------------------------")
+
+# -------------------------------
+# 4. Using continue in a for loop
+# -------------------------------
+
+for i in range(5):
+    if i == 2:
+        continue  # Skip iteration when i is 2
+    print("Continue example:", i)
+
+print("---------------------------")
+
+# -------------------------------
+# 5. Using range(start, stop, step)
+# -------------------------------
+
+for i in range(1, 10, 2):  # Start at 1, stop before 10, step by 2
+    print("Range with step:", i)</code></pre>
+                    <hr>
+                <h2>Functions in Python</h2>
+                <p>A function is a block of organized, reusable code used to perform a single, related action. Functions help break a program into smaller, modular parts.</p>
+                <h4>Function Implementation</h4>
+                <pre class="language-py"><code># 1. Basic Function (No Parameters, No Return)
+def greet():
+    print("Hello, welcome to Python!")
+
+greet()  # Output: Hello, welcome to Python!
+
+# ---------------------------------------------
+
+# 2. Function with Parameters
+def greet_user(name):
+    print("Hello", name)
+
+greet_user("Shree")  # Output: Hello Shree
+
+# ---------------------------------------------
+
+# 3. Function with Return Value
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(5, 3)
+print("Addition:", result)  # Output: Addition: 8
+
+# ---------------------------------------------
+
+# 4. Function with Default Parameter
+def welcome(name="User"):
+    print("Welcome", name)
+
+welcome()          # Output: Welcome User
+welcome("Mr ABC")    # Output: Welcome ABC
+
+# ---------------------------------------------
+
+# 5. Function with *args (Variable-length non-keyword arguments)
+def print_total(*numbers):
+    total = sum(numbers)
+    print("Total:", total)
+
+print_total(1, 2, 3, 4)  # Output: Total: 10
+
+# ---------------------------------------------
+
+# 6. Function with **kwargs (Variable-length keyword arguments)
+def print_profile(**info):
+    for key, value in info.items():
+        print(f"{key}: {value}")
+
+print_profile(name="Shree", age=30, location="Kolhapur")
+# Output:
+# name: Shree
+# age: 30
+# location: Kolhapur
+
+# ---------------------------------------------
+
+# 7. Lambda Function to compute the cube of a number
+cube = lambda x: x ** 3
+print("Cube of 3:", cube(3))  # Output: Cube of 3: 27</code></pre>
+<hr>
+<h2>Scopes and Closure</h2>
+              
+
+              
+ 
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #592c8c;">
+
+        <a class="navbar-brand" style="margin:auto" href="https:www.revolutionit.in">&copy; <img src="Images/whitelogo.png" style="height: 40px;"></a>
+
+
+
+    </nav>
+</body>
+
+</html>

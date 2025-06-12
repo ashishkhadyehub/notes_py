@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Python</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/prism.css">
+    <script src="assets/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
+    <style>
+        .marginforcontainerclass {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .margintopbutton {
+            margin-top: 15px;
+        }
+
+        .toolbar-item button {
+            cursor: pointer !important;
+            color: white !important;
+            border: 1px solid white !important;
+            border-radius: 15px !important;
+            padding: 5px 14px !important;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+            padding: 7px;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        .table {
+            overflow-x: auto;
+        }
+
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        h3,h4{
+           
+            
+            text-decoration: underline;
+        }
+
+        body {
+            font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+        }
+        ul,ol,p{
+            line-height: 2;
+            text-align: justify;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #306998, #ffd43b);">
+    <a class="navbar-brand" style="margin:auto" href="#">
+        <h3 style="text-decoration: none;">Python Programming - Session 4</h3>
+    </a>
+</nav>
+
+    <div class="container marginforcontainerclass">
+        <div class="row">
+            <div class="col-md-12">
+
+                <a style="float: right;"  href="index.html" class="btn btn-primary">View All Sessions</a>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-6">
+
+                <h2>Content</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <ul>
+                    <li>Sets in Python</li>
+                    <li>Immutable and Mutable in Python</li>
+                    <li>Conditional Statements in Python</li>
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <h2>Sets in Python</h2>
+                    <ul>
+                        <li>A set is an unordered collection of unique and immutable elements.</li>
+                        <li>Sets are mutable so we can add or remove elements.</li>
+                        <li>Cannot contain mutable items like lists or dictionaries.</li>
+                    </ul>
+                    <h4>Set Implementation </h4>
+                    <pre class="language-py"><code># Creating a set with duplicate elements
+numbers = {1, 2, 3, 4, 4, 5}
+print("Set (duplicates removed):", numbers)  # Output: {1, 2, 3, 4, 5}
+
+## Creating a set from a list using set()
+fruits = set(["apple", "banana", "apple", "orange"])
+print("Set from list:", fruits)  # Output: {'apple', 'banana', 'orange'}
+
+# Empty set (must use set(), not {})
+empty_set = set()
+print("Empty Set:", empty_set)
+
+# Add elements to a set
+fruits.add("grapes")
+print("After adding grapes:", fruits)
+
+# Remove element using remove() - raises error if not present
+fruits.remove("banana")
+print("After removing banana:", fruits)
+
+# ✅ Set Operations
+set_a = {1, 2, 3, 4}
+set_b = {3, 4, 5, 6}
+
+# Union - combines elements
+print("Union:", set_a | set_b) 
+
+# Intersection - common elements
+print("Intersection:", set_a & set_b)
+
+# Set of squares
+squares = {x**2 for x in range(0,11)};
+print("Squares Set:", squares) </code></pre>
+                    <hr>
+                <h2>Immutable and Mutable in Python</h2>
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Feature</th>
+                            <th>Mutable</th>
+                            <th>Immutable</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Definition</td>
+                            <td>Objects whose values can be changed after creation</td>
+                            <td>Objects whose values cannot be changed once created</td>
+                        </tr>
+                        <tr>
+                            <td>Examples</td>
+                            <td><code>list</code>, <code>dict</code>, <code>set</code>, <code>bytearray</code></td>
+                            <td><code>int</code>, <code>float</code>, <code>str</code>, <code>tuple</code>, <code>bool</code>,
+                                <code>frozenset</code></td>
+                        </tr>
+                        <tr>
+                            <td>Can modify contents?</td>
+                            <td>✅ Yes</td>
+                            <td>❌ No (new object is created on change)</td>
+                        </tr>
+                        <tr>
+                            <td>Memory Behavior</td>
+                            <td>Modified in place</td>
+                            <td>Creates a new object</td>
+                        </tr>
+                      
+                    </tbody>
+                </table>
+<h4>Example</h4>
+<pre class="language-py"><code>#string and int are immutable data types
+
+# Assigning a string value to the variable 'username'
+username = "shree"
+print(username)  # Output: shree
+
+# Reassigning a new value to the same variable 'username'
+username = "Ram"
+print(username)  # Output: Ram
+
+# Assigning an integer value to variable 'x'
+x = 10
+
+# Copying the value of x into variable 'y'
+y = x
+print(x, y)  # Output: 10 10
+# At this point, both x and y hold the value 10, but they are independent integers.
+
+# Changing the value of x
+x = 25
+print(y)  # Output: 10
+# y still holds the old value 10, because integers are immutable and assignment creates a new reference.
+
+# Now assigning y to reference the new value of x
+y = x
+print(y)  # Output: 25
+# y now holds the updated value of x, which is 25.</code></pre>
+<hr>
+<h2>Conditional Statements in Python</h2>
+<p>Conditional statements help in decision-making by executing certain blocks of code based on specified conditions.</p>
+<ul>
+  <li><strong>Simple if:</strong> Executes a block of code only if the condition is true.</li>
+  <li><strong>if-else:</strong> Provides an alternative block if the condition is false.</li>
+  <li><strong>if-elif-else:</strong> Checks multiple conditions in sequence, and executes the block for the first true condition.</li>
+  <li><strong>Nested if:</strong> One <code>if</code> or <code>if-else</code> inside another <code>if</code> block; used for multi-level decision-making.</li>
+  <li><strong>match:</strong> The match statement is Python's version of a switch-like pattern matching system. It allows you to match a variable's value against a series of patterns (cases) and execute corresponding blocks of code.</li>
+</ul>
+<h4>if..else Implementation</h4>
+<pre class="language-py"><code># 1. Simple if
+age = 20
+if age >= 18:
+    print("You are eligible to vote.")  # This line runs because age is 20
+
+# 2. if-else
+marks = 55
+if marks >= 40:
+    print("You passed the exam.")  # This line runs because marks >= 40
+else:
+    print("You failed the exam.")
+
+# 3. if-elif-else
+score = 85
+if score >= 90:
+    print("Grade: A")
+elif score >= 75:
+    print("Grade: B")  # This line runs because score is between 75 and 89
+elif score >= 60:
+    print("Grade: C")
+else:
+    print("Grade: D")
+
+# 4. Nested if
+number = 10
+if number > 0:
+    print("Positive number")
+    if number % 2 == 0:
+        print("Even number")  # This line runs because 10 is even
+    else:
+        print("Odd number")
+else:
+    print("Non-positive number")
+
+#5. match statement
+command = "start"
+
+match command:
+    case "start":
+        print("System is starting...")
+    case "stop":
+        print("System is stopping...")
+    case "pause":
+        print("System is paused.")
+    case _:
+        print("Unknown command.")
+
+#ternary expression
+age = 16
+print("Adult" if age >= 18 else "Minor")</code></pre>
+                
+              
+
+              
+ 
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #592c8c;">
+
+        <a class="navbar-brand" style="margin:auto" href="https:www.revolutionit.in">&copy; <img src="Images/whitelogo.png" style="height: 40px;"></a>
+
+
+
+    </nav>
+</body>
+
+</html>

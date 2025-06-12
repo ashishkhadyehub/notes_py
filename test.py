@@ -1,7 +1,8 @@
-library={
-    "Marathi":["Shrimanyogi","Chava","PuLa"],
-    "Historical":["Sambhaji","Shahu","Savarkar"],
-    "Science":["Kimayagar","Taramandal"]
-}
+my_str=""
+my_str += " more"
+print(my_str)
 
-print("Marathi Books: ", library["Marathi"])
+
+
+
+
