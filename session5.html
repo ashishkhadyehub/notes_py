@@ -105,8 +105,8 @@
                 <ul>
                     <li>Loops in Python</li>
                     <li>Functions in Python</li>
-                    <li>Scopes and Closure</li>
-                  
+                    <li>Scopes</li>
+                    <li>Closure</li>
                    
                     
                     
@@ -275,8 +275,113 @@ cube = lambda x: x ** 3
 print("Cube of 3:", cube(3))  # Output: Cube of 3: 27</code></pre>
 <hr>
 <h2>Scopes and Closure</h2>
-              
+<p>Scope refers to the region of a program where a variable is recognized and accessible.</p>
+<table class="table table-bordered table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Scope Type</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Local Scope</td>
+      <td>Variables declared inside a function and only accessible within that function.</td>
+      <td>
+        <pre><code>def my_func():
+    x = 10  # Local variable
+    print("Local:", x)
+my_func()</code></pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Enclosing Scope</td>
+      <td>Applies to nested functions. Inner functions can access variables from the outer function.</td>
+      <td>
+        <pre><code>def outer():
+    msg = "Hello"
+    def inner():
+        print("Enclosing:", msg)
+    inner()
+outer()</code></pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Global Scope</td>
+      <td>Variables declared at the top level of a script or module, accessible everywhere.</td>
+      <td>
+        <pre><code>x = 5  # Global variable
+def display():
+    print("Global:", x)
+display()</code></pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Built-in Scope</td>
+      <td>Names that are preassigned in Python like <code>print()</code>, <code>len()</code>, etc.</td>
+      <td>
+        <pre><code>print("Built-in function")  # No need to define print()</code></pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h4>Scopes Implementation</h4>
+<pre class="language-py"><code># GLOBAL SCOPE
+x = "Global Scope"
 
+def show_global():
+    print("Global Scope Value:", x)
+
+show_global()
+
+
+# LOCAL SCOPE
+def local_example():
+    y = "Local Scope"  # This variable is only accessible inside this function
+    print("Local Scope Value:", y)
+
+local_example()
+# print(y)  # This would raise an error
+
+
+# ENCLOSING SCOPE
+def outer():
+    msg = "Enclosing Scope"  # Enclosing variable
+
+    def inner():
+        print("Enclosing Scope Value:", msg)  # Accesses variable from outer()
+
+    inner()
+
+outer()
+
+
+# BUILT-IN SCOPE
+length = len([1, 2, 3])  # len() is a built-in function
+print("Built-in len():", length)</code></pre>
+<hr>
+<h2>Closure</h2>
+<p>A closure is a function object that remembers values from its enclosing lexical scope, even after the outer function has finished executing.</p>
+<h4>Closure Implementation</h4>
+<pre class="language-py"><code># Define the outer function that takes one argument
+def outer_func(msg):
+    # Define an inner function that uses the 'msg' variable from the outer function
+    def inner_func():
+        # This line will print the value of 'msg'
+        print(f"Message: {msg}")
+    
+    # Return the inner function, not calling it yet
+    return inner_func
+
+# Call outer_func with a message and assign the returned inner_func to a variable
+my_printer = outer_func("Hello Closure")
+
+# Now call the returned function
+my_printer()  # Output: Message: Hello Closure
+
+# Even though 'outer_func' has finished executing,
+# 'inner_func' still remembers the value of 'msg'.</code></pre>
               
  
     </div>

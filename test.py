@@ -1,8 +1,7 @@
-my_str=""
-my_str += " more"
-print(my_str)
+def make_multiplier(n):
+    def innerfunc(x):
+        return x*n
+    return innerfunc
 
-
-
-
-
+funccall=make_multiplier(3)
+print(funccall(10))
