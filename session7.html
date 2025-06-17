@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Python</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/prism.css">
+    <script src="assets/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
+    <style>
+        .marginforcontainerclass {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .margintopbutton {
+            margin-top: 15px;
+        }
+
+        .toolbar-item button {
+            cursor: pointer !important;
+            color: white !important;
+            border: 1px solid white !important;
+            border-radius: 15px !important;
+            padding: 5px 14px !important;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+            padding: 7px;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        .table {
+            overflow-x: auto;
+        }
+
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        h3,h4{
+           
+            
+            text-decoration: underline;
+        }
+
+        body {
+            font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+        }
+        ul,ol,p{
+            line-height: 2;
+            text-align: justify;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #306998, #ffd43b);">
+    <a class="navbar-brand" style="margin:auto" href="#">
+        <h3 style="text-decoration: none;">Python Programming - Session 7</h3>
+    </a>
+</nav>
+
+    <div class="container marginforcontainerclass">
+        <div class="row">
+            <div class="col-md-12">
+
+                <a style="float: right;"  href="index.html" class="btn btn-primary">View All Sessions</a>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-6">
+
+                <h2>Content</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <ul>
+                    <li>Object-Oriented Programming (OOP) in Python</li>
+                    
+                   
+                    
+                    
+                    
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <h2>Object-Oriented Programming (OOP) in Python</h2>
+                    <p>OOP (Object-Oriented Programming) is a programming paradigm that uses "objects" and "classes" to design and structure code. It helps in organizing complex programs, code reuse, and abstraction.</p>
+                   <table class="table table-bordered table-striped table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Concept</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Class</strong></td>
+      <td>A blueprint for creating objects. Defines attributes and behaviors (methods).</td>
+    </tr>
+    <tr>
+      <td><strong>Object</strong></td>
+      <td>An instance of a class. It holds actual data and can use the class’s methods.</td>
+    </tr>
+    <tr>
+      <td><strong>__init__()</strong></td>
+      <td>Constructor method that gets called when a new object is created from the class.</td>
+    </tr>
+    <tr>
+      <td><strong>self</strong></td>
+      <td>Refers to the current instance of the class. Used to access variables and methods.</td>
+    </tr>
+    <tr>
+      <td><strong>Method</strong></td>
+      <td>A function defined inside a class that describes the behavior of the object.</td>
+    </tr>
+    <tr>
+      <td><strong>Encapsulation</strong></td>
+      <td>Hides the internal state of an object and only exposes safe interfaces.</td>
+    </tr>
+    <tr>
+      <td><strong>Inheritance</strong></td>
+      <td>Allows one class (child) to inherit attributes and methods from another class (parent).</td>
+    </tr>
+    <tr>
+      <td><strong>Polymorphism</strong></td>
+      <td>Allows the same method to have different meanings based on the context (class/object).</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Why Use OOP?</h3>
+<ul>
+    <li>Organizes code into logical units (classes).</li>
+    <li>Makes code reusable (via inheritance).</li>
+    <li>Easier to maintain and extend.</li>
+    <li>Helps in building large-scale applications.</li>
+</ul>
+<h4>Class & Object</h4>
+<pre class="language-py"><code># Define a class
+class Person:
+    # Constructor
+    # __ is called dunder in Python terminology 
+    def __init__(self, name, age):
+        self.name = name      # instance variable
+        self.age = age
+
+    # Method to display details
+    def introduce(self):
+        print(f"Hi, I'm {self.name} and I'm {self.age} years old.")
+
+# Creating an object of the class
+p1 = Person("Ashish", 32)
+
+# Accessing method using the object
+p1.introduce()
+</code></pre>
+<h4>Inheritance</h4>
+<pre class="language-py"><code># Base class
+class Car:
+    def __init__(self, brand, model, fuel_type):
+        # Initialize common attributes for all types of cars
+        self.brand = brand
+        self.model = model
+        self.fuel_type = fuel_type
+
+    def start_engine(self):
+        # Method to simulate starting a fuel-based car engine
+        print(f"{self.brand} {self.model}'s engine started using {self.fuel_type}.")
+
+    def stop_engine(self):
+        # Method to simulate stopping the engine
+        print(f"{self.brand} {self.model}'s engine stopped.")
+
+
+# Derived class (ElectricCar inherits from Car)
+class ElectricCar(Car):
+    def __init__(self, brand, model, battery_capacity):
+        # super() is used to call the __init__ method of the parent class (Car)
+        # This ensures that brand, model, and fuel_type are initialized properly
+        # Even though fuel_type is not passed by the user, we hardcode it to 'Electric' for electric cars
+        super().__init__(brand, model, fuel_type="Electric")
+
+        # Initialize additional attribute specific to electric cars
+        self.battery_capacity = battery_capacity
+
+    def charge_battery(self):
+        # Method specific to ElectricCar
+        print(f"{self.brand} {self.model} is charging. Battery capacity: {self.battery_capacity} kWh.")
+
+    # Overriding start_engine method from the parent class
+    def start_engine(self):
+        # Electric cars don't start like fuel-based cars; hence, we override the behavior
+        print(f"{self.brand} {self.model} powers on silently. (Electric Start)")
+
+
+# Create a Car object
+my_car = Car("Audi", "A6", "Petrol")
+my_car.start_engine()        # Uses Car class's method
+my_car.stop_engine()
+
+print("---")
+
+# Create an ElectricCar object
+my_electric_car = ElectricCar("Tesla", "Model 3", 75)
+my_electric_car.start_engine()     # Uses overridden method in ElectricCar
+my_electric_car.charge_battery()
+my_electric_car.stop_engine()      # Inherited from Car (not overridden)
+</code></pre>
+<h4>Muliple Inheritance</h4>
+<pre class="language-py"><code># Parent class 1
+class Father:
+    def gardening(self):
+        print("Father enjoys gardening.")
+
+# Parent class 2
+class Mother:
+    def cooking(self):
+        print("Mother enjoys cooking.")
+
+# Child class inheriting from both Father and Mother
+class Child(Father, Mother):
+    def sports(self):
+        print("Child enjoys playing sports.")
+
+# Create object of Child
+c = Child()
+
+# Access methods from both parent classes
+c.gardening()   # Inherited from Father
+c.cooking()     # Inherited from Mother
+c.sports()      # Defined in Child
+</code></pre>
+<h4>Encapsulation</h4>
+<pre class="language-py"><code>class Employee:
+    def __init__(self, name, salary):
+        self.name = name               # Public attribute: can be accessed directly
+        self.__salary = salary         # Private attribute: __ makes it private to the class
+
+    def show_details(self):
+        # Public method to display employee details
+        print(f"Employee Name: {self.name}")
+        print(f"Salary: ₹{self.__salary}")
+
+    def set_salary(self, amount):
+        # Setter method to safely update the private attribute
+        if amount > 0:
+            self.__salary = amount
+        else:
+            print("Invalid salary!")
+
+    def get_salary(self):
+        # Getter method to access the private attribute
+        return self.__salary
+
+# Creating an Employee object
+emp = Employee("Shree", 50000)
+
+# Accessing public attribute directly
+print(emp.name)  # ✔ Allowed
+
+# Trying to access private attribute directly will raise an error
+# print(emp.__salary)  ❌ This will raise: AttributeError
+
+# Instead, use getter to access the private value
+print("Salary:", emp.get_salary())  # ✔ Safe access
+
+# Using setter to update the private value
+emp.set_salary(60000)
+
+# Display updated details
+emp.show_details()</code></pre>
+<h4>Polymorphism</h4>
+<pre class="language-py"><code># Define a class named Dog
+class Dog:
+    # Method that returns a dog sound
+    def speak(self):
+        return "Play dog sound!"
+
+# Define a class named Cat
+class Cat:
+    # Method that returns a cat sound
+    def speak(self):
+        return "Play cat sound!"
+
+
+# Create an instance of Dog
+d = Dog()
+
+# Create an instance of Cat
+c = Cat()
+
+# Function demonstrating polymorphism
+def play_animal_sound(animal):
+    # Calls the speak() method of the object passed
+    # Polymorphism in action: same method name behaves differently based on the object type
+    print(animal.speak())
+
+# Call the function with Dog object
+play_animal_sound(d)  # Output: Play dog sound!
+
+# Call the function with Cat object
+play_animal_sound(c)  # Output: Play cat sound!</code></pre>
+<h3>Static Method in class</h3>
+<p>A Static method is a method inside a class that does not depend on the instance (self) or class (cls). It's used when the function logically belongs to the class but doesn't need to access or modify class or instance data.</p>
+<h4>Static Method and Global scope variable</h4>
+<pre class="language-py"><code># Global scope variable
+company_name = "Revolution"
+
+class Employee:
+    # Static method: does not access instance (self) or class (cls)
+    @staticmethod
+    def welcome_message():
+        print("Welcome to the company!")
+
+    # Regular method accessing global variable
+    def show_company(self):
+        print("Company Name (from global scope):", company_name)
+
+# Call static method directly using class name
+Employee.welcome_message()  # Output: Welcome to the company!
+
+# Create an instance of Employee
+emp1 = Employee()
+
+# Call instance method that uses global variable
+emp1.show_company()  # Output: Company Name (from global scope): Revolution</code></pre>
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #592c8c;">
+
+        <a class="navbar-brand" style="margin:auto" href="https:www.revolutionit.in">&copy; <img src="Images/whitelogo.png" style="height: 40px;"></a>
+
+
+
+    </nav>
+</body>
+
+</html>
