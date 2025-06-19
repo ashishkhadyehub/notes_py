@@ -28,5 +28,22 @@ s3 = Student("Aarav")
 
 Student.total_students()  # Output: Total Students: 3
 
+# Decorator function
+def log_decorator(func):
+    def wrapper():
+        print("Function is being called...")
+        func()
+        print("Function has finished executing.")
+    return wrapper
+
+# Using the decorator
+@log_decorator
+def say_hello():
+    print("Hello, World!")
+
+# Call the decorated function
+say_hello()
+
+
 
 
