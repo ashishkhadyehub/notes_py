@@ -1,20 +1,28 @@
-import tkinter as tk
+import sqlite3
 
-# Create the main window
-root = tk.Tk()
-root.title("My First GUI")
-root.geometry("300x150")  # Width x Height
+db_name = "test.db"
 
-# Define a function to run on button click
-def say_hello():
-    label.config(text="Hello, Tkinter!")
+conn = sqlite3.connect(db_name)
 
-# Add a label and a button
-label = tk.Label(root, text="Click the button")
-label.pack(pady=10)
+cursor = conn.cursor()
 
-button = tk.Button(root, text="Click Me", command=say_hello)
-button.pack(pady=5)
+cursor.execute('''create table if not exists users(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        contact TEXT,
+        city TEXT
+               )
+''')
 
-# Start the GUI event loop
-root.mainloop()
+cursor.execute("insert into users (name,contact,city) values  (?,?,?)",('shree','8850024342','Kolhapur'))
+cursor.execute("insert into users(name,contact,city) values (?,?,?)",('ram','8850024343','Pune'))
+
+conn.commit()
+
+cursor.execute("select * from users")
+rows=cursor.fetchall()
+
+for user in rows:
+    print(f"Name:{user[1]}, Contact:{user[2]}, City:{user[3]} ")
+
+conn.close()
