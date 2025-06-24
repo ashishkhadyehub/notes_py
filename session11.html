@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Python</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/prism.css">
+    <script src="assets/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
+    <style>
+        .marginforcontainerclass {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .margintopbutton {
+            margin-top: 15px;
+        }
+
+        .toolbar-item button {
+            cursor: pointer !important;
+            color: white !important;
+            border: 1px solid white !important;
+            border-radius: 15px !important;
+            padding: 5px 14px !important;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+            padding: 7px;
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        .table {
+            overflow-x: auto;
+        }
+
+        h2 {
+            color: black;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        h3,h4{
+           
+            
+            text-decoration: underline;
+        }
+
+        body {
+            font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+        }
+        ul,ol,p{
+            line-height: 2;
+            text-align: justify;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #306998, #ffd43b);">
+    <a class="navbar-brand" style="margin:auto" href="#">
+        <h3 style="text-decoration: none;">Python Programming - Session 12</h3>
+    </a>
+</nav>
+
+    <div class="container marginforcontainerclass">
+        <div class="row">
+            <div class="col-md-12">
+
+                <a style="float: right;"  href="index.html" class="btn btn-primary">View All Sessions</a>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-6">
+
+                <h2>Content</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <ul>
+                    <li>Python Virtual Environment</li>
+                    <li>Python Open Source Code</li>
+                    <li>Anaconda</li>
+                    <li>Jupyter Notebook</li>
+                    
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <h2>Python Virtual Environment</h2>
+                    <p>A virtual environment is an isolated Python environment where:</p>
+                    <ul>
+                        <li>You can install packages independently of the global Python.</li>
+                        <li>Projects can have separate dependencies and package versions.</li>
+                        <li>It helps prevent version conflicts between different Python projects.</li>
+                    </ul>
+                    <h3>Why Use Virtual Environments?</h3>
+                    <table class="table table-bordered table-striped table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Reason</th>
+        <th scope="col">Explanation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dependency Isolation</td>
+        <td>Each project can use different versions of libraries without conflict.</td>
+      </tr>
+      <tr>
+        <td>Avoid Polluting System</td>
+        <td>Global Python remains clean as packages are installed only in the virtual environment.</td>
+      </tr>
+      <tr>
+        <td>Easy Project Management</td>
+        <td>Environments can be created, removed, and shared easily using <code>requirements.txt</code>.</td>
+      </tr>
+      <tr>
+        <td>Better Deployment</td>
+        <td>Ensures consistent setup across development, staging, and production systems.</td>
+      </tr>
+      <tr>
+        <td>Testing Multiple Versions</td>
+        <td>Allows you to test your code against different versions of libraries or Python itself.</td>
+      </tr>
+    </tbody>
+  </table>
+          <h4>Example</h4>         
+          <ol>
+            <li>Create Virtual Environment <pre class="language-c"><code>python -m venv env</code></pre></li>
+            <li>Activate the Environment <pre class="language-c"><code>env\Scripts\activate</code></pre></li>
+            <li>To exit the virtual environment <pre class="language-c"><code>deactivate</code></pre> </li>
+            <li>Install Packages Inside Virtual Environment <pre class="language-c"><code>pip install package-name</code></pre></li>
+            <li>Export installed packages <pre class="language-c"><code>pip freeze > requirements.txt</code></pre></li>
+            <li>Install from requirements.txt <pre class="language-c"><code>pip install -r requirements.txt</code></pre></li>
+          </ol>
+<hr>
+<h2>Python Open Source Code</h2>
+<p>Python is an open-source language, and its interpreter, standard library, and many third-party packages are available for anyone to explore and contribute.</p>
+<h3>Why Explore Open Source Python Code?</h3>
+<ul>
+    <li>Understand how professional Python code is written.</li>
+    <li>Learn real-world use of modules, classes, and functions.</li>
+    <li>Improve your problem-solving and debugging skills.</li>
+    <li>Contribute to projects and grow your developer profile (e.g., GitHub).</li>
+    <li>Learn how large applications are structured and maintained.</li>
+</ul>
+<h3>Where to Explore Python Source Code</h3>
+<table class="table table-bordered table-hover table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Source</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/python/cpython" target="_blank">Python GitHub (CPython)</a></td>
+          <td>Explore the official Python interpreter and standard library source code.</td>
+        </tr>
+        <tr>
+          <td><a href="https://pypi.org/" target="_blank">PyPI (Python Package Index)</a></td>
+          <td>Find thousands of open-source Python packages with source code links.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+    <hr>
+    <h2>Anaconda</h2>
+    <p>Anaconda is a free and open-source Python distribution used for scientific computing, data science, machine learning, and big data processing. It simplifies package management and deployment.</p>
+    <p><a target="_blank" href="https://www.anaconda.com">Download Anaconda</a></p>
+    <h3>Key Features of Anaconda</h3>
+     <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pre-installed Libraries</td>
+                <td>Comes with 250+ scientific libraries like NumPy, Pandas, Matplotlib, etc.</td>
+            </tr>
+            <tr>
+                <td>Package Manager</td>
+                <td>Uses <code>conda</code>, which is more powerful and flexible than <code>pip</code>.</td>
+            </tr>
+            <tr>
+                <td>Virtual Environments</td>
+                <td>Allows isolated environments for different projects using <code>conda create</code>.</td>
+            </tr>
+            <tr>
+                <td>Cross-platform</td>
+                <td>Works on Windows, macOS, and Linux.</td>
+            </tr>
+            <tr>
+                <td>GUI Support</td>
+                <td>Includes Anaconda Navigator, a user-friendly interface for managing environments and packages.</td>
+            </tr>
+            <tr>
+                <td>Jupyter Notebook</td>
+                <td>Integrated with Jupyter for interactive and data-driven development.</td>
+            </tr>
+            <tr>
+                <td>Data Science Friendly</td>
+                <td>Optimized for data science, machine learning, and big data applications.</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Common Anaconda Commands</h3>
+<table class="table table-bordered table-striped table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Command</th>
+        <th scope="col">Description</th>
+        <th scope="col">Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>conda list</code></td>
+        <td>Lists all installed packages in the current environment.</td>
+        <td><code>conda list</code></td>
+      </tr>
+      <tr>
+        <td><code>conda create --name py310 python=3.10</code></td>
+        <td>Creates a new environment with the specified python version.</td>
+        <td><code>conda create -n myenv numpy</code></td>
+      </tr>
+      <tr>
+        <td><code>conda activate env_name</code></td>
+        <td>Activates the specified environment.</td>
+        <td><code>conda activate myenv</code></td>
+      </tr>
+      <tr>
+        <td><code>conda deactivate</code></td>
+        <td>Deactivates the current active environment.</td>
+        <td><code>conda deactivate</code></td>
+      </tr>
+      <tr>
+        <td><code>conda info --envs</code></td>
+        <td>Lists all environments available on your system.</td>
+        <td><code>conda info --envs</code></td>
+      </tr>
+      <tr>
+        <td><code>conda install package_name</code></td>
+        <td>Installs a package into the current environment.</td>
+        <td><code>conda install pandas</code></td>
+      </tr>
+      <tr>
+        <td><code>conda update conda</code></td>
+        <td>Updates the Conda package manager itself.</td>
+        <td><code>conda update conda</code></td>
+      </tr>
+      <tr>
+        <td><code>conda update package_name</code></td>
+        <td>Updates a specific package.</td>
+        <td><code>conda update numpy</code></td>
+      </tr>
+      <tr>
+        <td><code>conda remove package_name</code></td>
+        <td>Removes a specific package from the environment.</td>
+        <td><code>conda remove matplotlib</code></td>
+      </tr>
+      <tr>
+        <td><code>conda env remove -n env_name</code></td>
+        <td>Deletes an entire Conda environment.</td>
+        <td><code>conda env remove -n myenv</code></td>
+      </tr>
+    </tbody>
+  </table>
+<h3>Anaconda Navigator</h3>
+<p>Anaconda Navigator is a graphical user interface (GUI) included with the Anaconda distribution. It allows users to manage packages, environments, and launch applications without using command-line tools.</p>
+
+    <h3>Miniconda</h3>
+    <p>Miniconda is a minimal, lightweight version of the Anaconda distribution. It includes only the Conda package manager and Python, without the pre-installed data science libraries that come with full Anaconda.</p>
+    <hr>
+    <h2>Jupyter Notebook</h2>
+    <p>Jupyter Notebook is an open-source web-based interactive environment where you can create and share documents that contain:</p>
+    <ul>
+      <li>Live code</li>
+      <li>Equations</li>
+      <li>Visualizations</li>
+      <li>Text (Markdown)</li>
+    </ul>
+    <p>It's especially popular in data science, machine learning, and education.</p>
+    <h3>Key Features of Jupyter Notebook</h3>
+    <table class="table table-bordered table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>Feature</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Interactive Code Execution</td>
+        <td>Write and run code in small cells, allowing real-time results and iterative development.</td>
+      </tr>
+      <tr>
+        <td>Multi-language Support</td>
+        <td>Supports Python, R, Julia, and other languages using different kernels.</td>
+      </tr>
+      <tr>
+        <td>Rich Text & Markdown</td>
+        <td>Use Markdown to format text, insert headers, lists, links, and LaTeX equations.</td>
+      </tr>
+      <tr>
+        <td>Data Visualization</td>
+        <td>Inline visualization support for libraries like matplotlib, seaborn, and plotly.</td>
+      </tr>
+      <tr>
+        <td>Notebook File Format (.ipynb)</td>
+        <td>Saves work in shareable JSON-based .ipynb files.</td>
+      </tr>
+      <tr>
+        <td>Integration with Libraries</td>
+        <td>Easily integrates with pandas, NumPy, scikit-learn, TensorFlow, etc.</td>
+      </tr>
+      <tr>
+        <td>Web Interface</td>
+        <td>Runs in a web browser for a clean, interactive user experience.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h4>Example</h4>
+  <h5>Create Jupyter Notebook file (.ipynb)</h5>
+  <h5>Markdown Cell</h5>
+    <pre class="language-py"><code>### Calculate the Area of a Circle
+
+This notebook calculates the area of a circle using the formula:
+
+$$
+\text{Area} = \pi \times r^2
+$$
+
+We will ask the user for the radius and compute the area.</code></pre>
+<h5>Code Cell</h5>
+<pre class="language-py"><code>import math
+
+# Input from user
+radius = float(input("Enter the radius of the circle: "))
+
+# Calculate area
+area = math.pi * radius ** 2
+
+# Display result
+print(f"The area of the circle with radius {radius} is {area:.2f}")</code></pre>
+<h4>Example : Web Based Jupyter Notebook</h4>
+<ul>
+  <li><strong>Open Jupyter Notebook from Anaconda Navigator:</strong>
+    <ul>
+      <li>Launch <strong>Anaconda Navigator</strong> from the Start Menu.</li>
+      <li>Click <strong>Launch</strong> under the <strong>Jupyter Notebook</strong> tile.</li>
+      <li>A browser tab will open at <code>http://localhost:8888/tree</code>.</li>
+      <li>Navigate to your desired folder.</li>
+      <li>Click <strong>New → Python</strong> to create a new notebook.</li>
+    </ul>
+  </li>
+
+  <li><strong>Write and Run the Graph Code:</strong>
+    <ul>
+      <li>In the first code cell, enter the following Python code:</li>
+   
+        <pre class="language-py"><code>import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
+
+plt.plot(x, y, marker='o', color='blue', linestyle='--')
+plt.title("Simple Line Graph")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+plt.grid(True)
+plt.show()</code></pre>
+      
+      <li>Press <strong>Shift + Enter</strong> to run the cell and display the output.</li>
+    </ul>
+  </li>
+
+  
+</ul>
+
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #592c8c;">
+
+        <a class="navbar-brand" style="margin:auto" href="https:www.revolutionit.in">&copy; <img src="Images/whitelogo.png" style="height: 40px;"></a>
+
+
+
+    </nav>
+</body>
+
+</html>
